@@ -1,0 +1,63 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+body {
+  background-color: $grayDarker;
+  color: white;
+}
+
+html, body {
+  height:100vh;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.main-content {
+  @include float-span(12);
+  height: 100%;
+}
+
+.main-content-left {
+  @include float-span(6);
+}
+
+.main-content-right {
+  @include float-span(6, last);
+}
+
+.overlay-image {
+
+  text-align: center;
+  p{
+    margin: 0;
+  }
+}
+
+.overlay-image--mobile {
+  display: block;
+  height: 100%;
+}
+
+.overlay-image--desktop {
+  display: none;
+}
+
+@include breakpoint($tablet) {
+  .overlay-image--mobile {
+    display: none;
+  }
+  .overlay-image--desktop {
+    display: block;
+  }
+} 
